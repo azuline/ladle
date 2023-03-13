@@ -9,7 +9,10 @@ const wordSeparators =
  * @param {string} str
  */
 export const capitalize = (str) => {
-  return str.charAt(0).toUpperCase() + str.slice(1);
+  return str
+    .split(" ")
+    .map((x) => x.charAt(0).toUpperCase() + x.slice(1))
+    .join(" ");
 };
 
 /**
